@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+            #box-container{
+                position: absolute;
+                top:0px;
+                left:0px;
+                width:1263px;
+                height:1960px;
+
+            }
+            #head-container{
+                width: auto;
+                height: 210px;
+                border-bottom: 1px solid rgb(196, 196, 196);
+
+            }
+
+            #search-container{
+                width:auto;
+                height:110px;
+                border: 1px solid black
+            }
+
+            #logo2{
+                float: left;
+            }
+
+            #pop-container{
+                width: auto;
+                height: auto;
+                float: left;
+                position: relative;
+                left: 120px;
+                top: 37px;
+                border: 1px solid black;
+            }
+
+            #realtime-container{
+                width:150px;
+                height: 30px;
+                float: left;
+                top: 5px;
+                position: relative;
+                border: 1px solid black;    
+            }
+
+            ol{
+                width:150px;
+                height: 30px;
+            }
+
+            #realtime-container ol{
+                margin: 0px 0px;
+                padding: 0px 0px;
+                border: 1px solid rgb(169, 38, 230); 
+            }
+
+            #realtime-container ol li{ /* list pdding 초기값 주의 !*/
+                position: relative;
+                margin: 0px 20px;
+                padding: 7px 3px;
+                font-family: "Dotum";
+                font-size: 12px;
+            }
+
+
+        </style>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+    </head>
+    <body>
+        <div id="box-container">
+                <div id="search-container">
+                    <div id="pop-container">
+                        <img src="급상승.PNG" id="logo2" width= "55px" height= "40px" usemap="#workmap2">
+                        <map name="workmap2">
+                            <area shape="rect" coords="0,0,150,100" href="#">
+                            </map>
+                         <div id="realtime-container">
+                                <ol style="overflow: hidden"> <!-- overflow hidden !!!-->
+                                    <li>아이유</li>
+                                    <li>오마이걸</li>
+                                    <li>2PM</li>
+                                    <li>유키스</li>
+                                </ol>
+                        </div>
+                    </div>
+                </div>
+    </div>  
+        <script>
+
+            let now = 0;
+            now++; 
+            setInterval(function(){ // 이전에 undefined 떴는 이유;; 매개변수로서 선언한 now 타입이 선언되지 않은 상태였고
+                                    // 위에 작성한 let now 와는 상관없는 데이터.. 따라서 undefined 를 띄움.
+                var listLen = $("#realtime-container ol li").length;
+
+                if(now == listLen){ now = 0;}
+                
+                var prev = now - 1;
+                if(prev < 0){ prev = listLen-1;}
+
+                $("#realtime-container ol li").eq(0).slideUp("slow");
+            }, 1000);
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <style>
+
+            #box-container{
+                position: absolute;
+                top:0px;
+                left:0px;
+                width:1263px;
+                height:1420px;
+            }
+            #head-container{
+                width: auto;
+                height: 190px;
+            }
+            #top-container{
+                width:auto;
+                height:35px;
+                border-bottom: 0.5px solid rgb(231, 231, 231);
+                border-top: 3px solid rgb(63, 219, 63);
+            }
+
+            #top-left-container{
+                float: left;
+                position: absolute;
+                left: 130px;
+            }
+
+            #top-right-container{
+                float: right;
+                position: absolute;
+                right: 138px;
+            }
+
+            #search-container{
+                width:auto;
+                height:110px;
+            }
+
+            #pop-container{
+                width: auto;
+                height: auto;
+                float: left;
+                position: relative;
+                left: 120px;
+                top: 37px;
+            }
+
+            #realtime-container{
+                width:150px;
+                height: 30px;
+                float: left;
+                top: 5px;
+                position: relative;
+            }
+
+            #news-container{
+                width:270px;
+                height:100px;
+                float: left;
+                position: relative;
+                left: 160px;
+                top: 35px;
+            }
+
+            #menu-container {
+                position: relative;
+                padding: 5px 100px;
+                top: 10px;
+                width:auto;
+                height:40px;
+            }
+             #middle-container {
+                width:auto;
+                height:965px;
+                border-top: 1px solid rgb(196, 196, 196);
+                border-bottom: 1px solid rgb(196, 196, 196);
+            }
+
+            #album-container {
+                float: left;
+                margin-left: 120px;
+                width:720px;
+                height:370px;
+                border: 1px solid pink;
+            }
+
+            #select-container {
+                width:720px;
+                height:30px;
+                padding-top: 20px;
+                border: 5px solid pink;
+            }
+
+            .left{
+                position: relative;
+                float: left;
+                width:470px;
+                height:310px;
+                border: 1px solid pink;
+            }
+
+            .left > div {
+                width: 150px;
+                height: 150px;
+                margin: 2px;
+                float:left;
+                border: 1px solid greenyellow;
+            }
+
+            .right{
+                position: relative;
+                float: right;
+                width:240px;
+                height:310px;
+                border: 1px solid pink;
+            }
+
+            #login-container {
+                float: right;
+                margin-right: 120px;
+                position: relative;
+                width:290px;
+                height:370px;
+            }
+
+            #member-container {
+                background-color: rgb(250, 250, 250);
+                position: relative;
+                top: 55px;
+                height:110px;
+                border: 1px solid rgb(216, 215, 215);
+            }
+
+            #member-container div{
+                position: relative;
+                background-color: rgb(16, 207, 89);
+                width: 250px;
+                height:40px;
+                margin-top: 30px;
+                margin-left: 20px;
+                text-align: center;
+            }
+
+            #event-container {
+                position: relative;
+                top: 65px;
+                height: 185px;
+                border: 1px solid black;
+                overflow: hidden;
+            }
+           /* #issue-container {
+                position: relative;
+                float: left;
+                margin-left: 120px;
+                width:720px;
+                height:500px;
+                border: 1px solid pink;
+            }
+            #chart-container {
+                float: right;
+                margin-right: 110px;
+                position: relative;
+                width:300px;
+                height:500px;
+                border: 1px solid pink;
+            }
+            #notice-container {
+                position: relative;
+                top: 915px;
+                width: auto;
+                height:50px;
+                border: 1px solid pink;
+            }
+            #bottomenu-container {
+                width:auto;
+                height:60px;
+                border: 1px solid black;
+            }
+            #bottom-container {
+                width:auto;
+                height:210px;
+                border: 1px solid black;
+            } */
+            ul{
+                display: inline;
+                padding: 5px 0px;
+                list-style: none;
+            }
+
+            #head-container li{
+                display: inline;
+                padding: 12px 6px;
+            }
+            
+            #first-menu{
+                margin: 15px;
+            }
+
+            #first-menu li a{
+                padding: 5px 5px;
+                text-decoration: none;
+                font-size: 16px;
+                font-family: 'MDotum';
+                font-weight: 1000;
+                color: rgb(14, 14, 14);
+            }
+
+            #second-menu li a{
+                margin-left: 25px;
+                padding: 10px 0px;
+                text-decoration: none;
+                font-size: 16px;
+                font-family: 'MDotum';
+                font-weight: 700;
+                color: rgb(126, 126, 126);
+            }
+
+            #top-container a{
+                padding: 5px 0px;
+                text-decoration: none;
+                font-size: smaller;
+                font-size: 13px;
+                font-family: 'MDotum';
+                font-weight: 550;
+                color: rgb(126, 126, 126);
+            }
+
+            #ticket{
+                vertical-align: middle;
+                width:20px;
+                height:13px; 
+            }
+
+            li img{
+                vertical-align: middle;
+                width:1px;
+                height:13px; 
+            }
+            
+            #logo{
+                position: relative;
+                float:left;
+                left: 130px;
+            }
+
+            #logo2{
+                float: left;
+            }
+
+            .active{
+                color:rgb(63, 219, 63);
+            }
+
+            fieldset{
+                position: relative;
+                float: left;
+                display: inline;
+                width: 320px;
+                height: 30px;
+                left: 130px;
+                top: 35px;
+                border: none;
+            }
+
+            input{
+                position: relative;
+                border: none;
+                color:rgb(179, 179, 179);
+            }
+
+            #search{
+               float:left;
+               height:20px;
+               margin-top: 6px;
+               margin-left: 10px;
+               margin-right: 0px;
+               font-size: 12px;
+               font-family: 'Dotum';
+            }
+
+            #submit{
+                margin-top: 3px;
+                margin-left: 10px;
+                width:25px;
+                height:25px;
+            }
+
+            #news-container .prev{
+                cursor: pointer;
+                position: relative;
+                top: 40px;
+                left: 5px;
+                user-select: none;
+            }
+
+            #news-container .next {
+                padding-left: 4px;
+                cursor: pointer;
+                position: relative;
+                right: 0;
+                top: 40px;
+            }
+
+            .news{
+                float: left;
+                width: 220px;
+                height: 100px;
+            }
+
+            #realtime-container ol{
+                width:150px;
+                height: 30px;
+                margin: 0px 0px;
+                padding: 0px 0px;
+            }
+
+            #realtime-container ol li{ /* list pdding 초기값 주의 !*/
+                position: relative;
+                display: block;
+                margin: 0px 10px;
+                padding: 9px 0px;
+                font-family: "Dotum";
+                font-size: 12px;
+            }
+
+           #lank{
+               position: relative;
+               top: 8px;
+               float: left;
+               font-family: "Dotum";
+               font-size: 12px;
+           }
+
+           #dropdown-menu{
+                position: absolute;
+                width: 130px;
+                height: 265px;
+                z-index: 1;
+                margin: 5px 3px;
+                margin-top:3px;
+                border: 1px solid rgb(133, 133, 133);
+                background-color: white;
+                padding: 10px 10px;
+                display: none;
+           }
+
+           #dropdown-menu li {
+                display: block;
+                padding-top: 5px;
+                margin-bottom: 0px;
+                padding-bottom: 5px;
+                font-family: "Dotum";
+                font-size: 12px;
+           }
+
+           #dropdown-menu li a{
+               color: black;
+           }
+
+           a{
+            text-decoration: none;
+           }
+
+           #more{
+               margin-top: 5px;
+               border-top: 0.5px solid rgb(109, 109, 109);
+               text-align: center;
+               text-decoration: none;
+               color: black;
+           }
+
+           #select-container > a{
+                float: left;
+                font-family: 'MDotum';
+                font-weight: bolder;
+                padding-right: 190px;
+                color: black;   
+                margin-top: 3px;
+           }
+
+           #select-container li {
+               float: left;
+               margin: 0px 3px;
+               padding: 0px;
+           }
+           
+           #select-container li a {
+
+               font-family: 'MDotum';
+               font-weight: bolder;
+               color: rgb(114, 114, 114);
+               font-size: 12px;
+               margin: 0px;
+           } 
+eqweqwrwr
+           #totalpage{
+                float: left;
+                margin: 3px 0px;
+                font-family: 'MDotum';
+                font-size: 12px;
+                color: rgb(138, 138, 138);
+           }
+
+           #curpage{ 
+               float: left;
+               font-family: 'MDotum';
+               margin-top: 3px;
+               margin-left: 33px;
+               font-size: 12px;
+               padding: 0px 0px;
+               margin-right: 0px;
+           }
+
+           #select-container > div {
+               float: left;
+               width: 60px;
+               height: 30px;
+               margin-top: 3px;
+               margin-left: 2px;
+            }               
+
+            #middle-container .prev{
+                cursor: pointer;
+                position: relative;
+                user-select: none;
+            }
+            #middle-container .next {
+                cursor: pointer;
+                position: relative;
+            }
+
+           #member-container span,  #member-container a{
+               position: relative;
+               top: 20px;
+               left: 19px;
+               font-family: "Dotum";
+               font-size: 11px;
+               color: rgb(155, 155, 155);
+           }
+
+           #member-container > a{
+               color: black;
+               margin-left: 40px;
+           }
+
+           #member-container div span {
+                position: relative;
+                top: 8px;
+                font-family: "Dotum";
+                font-size: 14px;
+                font-weight: bolder;
+                color: white;
+                margin-right: 30px;
+           }
+
+           #popup{
+               position: relative;
+               background-color: white;
+                z-index: 1;
+                padding-left:11px;
+                top: 200px;
+                left: 320px;
+                width: 500px;
+                height: 370px;
+                border: 1px solid rgb(94, 94, 94);
+                box-shadow: 1px 1px 1px rgb(206, 206, 206); 
+           }
+
+           #popup > div{
+               position: relative;
+               top:10px;
+               margin: 8px 3px;
+               width: 235px;
+               height: 310px;
+               float: left;
+           }
+
+           #popup input{
+               float: left;
+               position: relative;
+               top: 10px;
+               border: 1px solid black;
+           }
+
+           #popup label{
+               float: left;
+               position: relative;
+               top: 12px;
+               left: 2px;
+               font-family: "Dotum";
+               font-size: 12px;
+           }
+
+           #popup button{
+               float: right;
+               position: relative;
+               right: 18px;
+               height: 30px;
+               top: 7px;
+           }
+
+        </style>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+    </head>
+    <body>
+        <div id="popup">
+            <div><img src="pop1.PNG" width="100%"></div>
+            <div><img src="pop2.PNG" width="100%"></div>
+            <input type="checkbox" id="cb"><label for="cb">오늘 하루 이 창을 열지 않음</label>
+            <button>닫기</button>
+        </div>
+        <div id="box-container">
+            <div id="head-container">
+                <div id="top-container">
+                    <div id="top-left-container">
+                        <ul> 
+                        <li><a href="Melon.html">멜론티켓</a></li>
+                        </ul>
+                    </div>
+                    <div id="top-right-container">
+                        <ul>
+                        <li><a href="#ticket" value="text"><img src="티켓3.PNG" id="ticket" value="img">이용권구매</a></li>
+                        <li><a><img src="bar.PNG"></a></li>
+                        <li><a href="#ticket">VIP혜택관</a></li>
+                        <li><a><img src="bar.PNG"></a></li>
+                        <li><a href="#ticket">이벤트</a></li>
+                        </ul>
+                     </div>
+                </div>
+
+                <div id="search-container">
+                    <img src="title.PNG" id="logo" width= "150px" height= "110px" usemap="#workmap">
+                    <map name="workmap">
+                    <area shape="rect" coords="0,0,150,100" href="Melon.html" title="MelOn로고 - 홈으로 이동">
+                    </map>
+
+                    <fieldset style="background: url(search2.PNG);">
+                        <input type="search" id="search" title="검색 입력 편집창" size="38" placeholder="[금주의 차트] 한눈에 보는 주간 차트 리뷰">
+                        <input type="button" id="submit" title="검색" style="background: url(submit.PNG); cursor: pointer;" >
+                    </fieldset>
+
+                    <div id="pop-container">
+                        <img src="급상승.PNG" id="logo2" width= "55px" height= "40px" usemap="#workmap2">
+                        <map name="workmap2">
+                            <area shape="rect" coords="0,0,150,100" href="#">
+                            </map>
+                         <div id="realtime-container"> 
+                             <ul id="dropdown-menu">
+                                <li><a href="#">1. 아이유</a></li>
+                                <li><a href="#">2. 이수진</a></li>
+                                <li><a href="#">3. 2PM</a></li>
+                                <li><a href="#">4. 유키스</a></li>
+                                <li><a href="#">5. 틴탑</a></li>
+                                <li><a href="#">6. 빅뱅</a></li>
+                                <li><a href="#">7. 2AM</a></li>
+                                <li><a href="#">8. 싹쓰리</a></li>
+                                <li><a href="#">9. 여름안에서</a></li>
+                                <li><a href="#">10. 삐삐</a></li>
+                                <li id="more"><a href="#">더보기</a></li>
+                            </ul>
+                                <ol style="overflow: hidden;">
+                                    <li><span style="color: red; font-weight: bolder">1. </span>아이유</li>
+                                    <li><span style="color: red; font-weight: bolder">2. </span>이수진</li>
+                                    <li><span style="color: red; font-weight: bolder">3. </span>2PM</li>
+                                    <li><span style="color: rgb(49, 49, 49); font-weight: bolder">4. </span>유키스</li>
+                                    <li><span style="color: rgb(49, 49, 49); font-weight: bolder">5. </span>틴탑</li>
+                                    <li><span style="color: rgb(49, 49, 49); font-weight: bolder">6. </span>빅뱅</li>
+                                    <li><span style="color: rgb(49, 49, 49); font-weight: bolder">7. </span>2AM</li>
+                                    <li><span style="color: rgb(49, 49, 49); font-weight: bolder">8. </span>싹쓰리</li>
+                                    <li><span style="color: rgb(49, 49, 49); font-weight: bolder">9. </span>여름안에서</li>
+                                    <li><span style="color: rgb(49, 49, 49); font-weight: bolder">10. </span>삐삐</li>
+                                </ol>
+                               
+                        </div>
+                    </div>
+
+                    <div id="news-container"> 
+                        <div class="news"> <!-- 1쪽 이미지 -->
+                            <img src="new1.PNG" style="width:103%;">
+                        </div>
+                      
+                        <div class="news"> <!-- 2쪽 이미지 -->
+                            <img src="new2.PNG" style="width:103%;">
+                        </div>
+                      
+                        <div>
+                            <a class="prev"><img src=prev2.PNG style="width:8%;"></a><a class="next"><img src=next2.PNG style="width:8%;"></a>
+                        </div>
+                    </div>
+
+                </div>
+                
+
+                <div id="menu-container">
+                    <ul id="first-menu">
+                        <li><a href="#">멜론차트</a></li>
+                        <li><a href="#">최신</a></li>
+                        <li><a href="#">장르</a></li>
+                        <li><a href="#">멜론DJ</a></li>
+                        <li><a href="#">멜론TV</a></li>
+                        <li><a href="#">스타포스트</a></li>
+                        <li><a href="#">매거진</a></li>
+                        <li><a href="#">뮤직어워드</a></li>
+                        <li><a href="#">멜론Hi-Fi</a></li>
+                        <li><a href="#">더보기</a></li>
+                    </ul>
+                    <ul id="second-menu">
+                        <li><a href="#">마이뮤직</a></li>
+                        <li><a href="#">피드</a></li>
+                    </ul>
+            </div>
+
+        <div id="middle-container">
+            <div id="album-container">
+                <div id = "select-container">
+                    <a href="#">최신 앨범</a>
+                    <ul>
+                        <li><a href="#">전체</a></li>
+                        <li><a><img src="bar.PNG"></a></li>
+                        <li><a href="#">가요</a></li>
+                        <li><a><img src="bar.PNG"></a></li>
+                        <li><a href="#">POP</a></li>
+                    </ul>
+                    <span id="curpage">1</span><span id="totalpage">/9</span>
+                    <div>
+                        <a class="prev"><img src=prev2.PNG style="width:40%;"></a><a class="next"><img src=next2.PNG style="width:40%;"></a>
+                    </div>
+                </div>
+                
+                <div class = "left">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class = "right">
+                    <div></div>
+                </div>
+            </div>
+
+            <div id ="login-container">
+                <div id="member-container">
+                    <span>멜론을 더 안전하게 이용하세요. </span>
+                    <a href="#">회원가입</a>
+                    <div style="cursor: pointer;"><span>로그인</span></div>
+                </div>
+                <div id="event-container"><img src="eventImg.PNG" usemap="#workmap3" title="티켓(모차르트)" style="cursor: pointer;" width="100%"";>
+                    <map name="workmap3">
+                        <area shape="rect" coords="0,0,150,100" href="#">
+                        </map></div>
+            </div>
+
+            <div id ="issue-container">
+
+            </div>
+            <div id ="chart-container">
+
+            </div>
+            <div id ="notice-container">
+
+            </div>
+        </div>
+        
+        <div id="bottomenu-container"></div>
+        <div id="bottom-container"></div>
+    </div>  
+        <script>
+
+            var slideIndex = 1; 
+            showSlides(slideIndex);
+
+            $(".prev").click(function(){
+                slideIndex -= 1;
+                showSlides(slideIndex);
+            });
+
+            $(".prev").hover(function(event){
+                $(event.target).find("img").css("filter", "brightness(80%)");
+            }, function(event){
+                $(event.target).find("img").css("filter", "brightness(100%)");
+            });
+
+            $(".next").click(function(){
+                slideIndex += 1;
+                showSlides(slideIndex);
+            }).hover(function(){
+                $(event.target).find("img").css("filter", "brightness(80%)");
+            }, function(){
+                $(event.target).find("img").css("filter", "brightness(100%)");
+            });
+
+            function showSlides(n) {
+
+                var slides = $(".news");
+
+                if (n > slides.length) {slideIndex = 1}   
+                if (n < 1) {slideIndex = slides.length}
+
+                $(".news").css("display","none");
+                $(".news").eq(slideIndex-1).css("display","block");
+              }
+
+
+            $("#top-left-container").find("a").hover(function(e){
+                $(e.target).css("color", "rgb(63, 219, 63)");
+            }, function(e){
+                $(e.target).css("color", "rgb(126, 126, 126)");
+            });
+
+            $("#top-right-container").find("a").slice(2,5).hover(function(e){
+                    $(e.target).css("color", "rgb(43, 43, 43)");
+            }, function(e){
+                    $(e.target).css("color", "rgb(126, 126, 126)");
+            });
+
+            $("#top-right-container").find("a").hover(function(e){
+                ticketonEvent(e);
+            }, function(e){
+                ticketoffEvent(e);
+            });
+
+            function ticketonEvent(event){
+                switch($(event.target).attr("value")){
+                    case "text":
+                     $(event.target).css("color", "rgb(43, 43, 43)").find("img").css("filter","brightness(90%)");
+                    break;
+
+                    case "img":
+                    $("#top-right-container").find("a").eq(0).css("color", "rgb(43, 43, 43)");
+                    $(event.target).css("filter","brightness(90%)");
+                    break;
+                }
+               
+            }
+
+            function ticketoffEvent(event){
+                switch($(event.target).attr("value")){
+                    case "text":
+                    $(event.target).css("color", "rgb(126, 126, 126)").find("img").css("filter","brightness(100%)");
+                    break;
+
+                    case "img":
+                    $("#top-right-container").find("a").eq(0).css("color", "rgb(126, 126, 126)")
+                    $(event.target).css("filter","brightness(100%)");
+                    break;
+                }
+            }
+
+            $("#search").focus(function(e){
+                $(e.target).attr("placeholder","");
+            });
+
+           $("#submit").hover(function(e){
+                $(e.target).css("filter", "brightness(90%)");
+            },function(e){
+                $(e.target).css("filter", "brightness(100%)");
+            });
+
+            $("#submit").click(function(){
+                if(($("#search").val()+"").length == 0){
+                    alert("검색어를 입력하세요");
+                }
+                else{
+                    console.log($("#search").val()+"");
+                }
+            });
+
+
+            $("#first-menu li a").hover(function(e){
+                $(e.target).css("color", "rgb(63, 219, 63)");
+            }, function(e){
+                $(e.target).css("color", "rgb(14, 14, 14)");
+            });
+
+            $("#second-menu li a").hover(function(e){
+                $(e.target).css("color", "rgb(63, 219, 63)");
+            }, function(e){
+                $(e.target).css("color", "rgb(126, 126, 126)");
+            });
+
+            let now = 0;
+
+            var arr = $("#realtime-container ol li");
+            var listLen = $("#realtime-container ol li").length;
+
+            setInterval(function(){ // 이전에 undefined 떴는 이유;; 매개변수로서 선언한 now 타입이 선언되지 않은 상태였고
+                                    // 위에 작성한 let now 와는 상관없는 데이터.. 따라서 undefined 를 띄움.
+                                        // 밑에 계속 추가
+                
+                if(listLen == now){ now = 0;}
+                
+                var curLank = $("#realtime-container ol li").eq(0);
+                
+                curLank.slideUp("slow", function(){ 
+                    $("ol").append($(arr[now]).css("display", "block"));
+                    now++;
+                });
+
+            }, 3000);
+            
+            $("#dropdown-menu").css("display", "none");
+
+            $("#realtime-container").hover(function(){
+                $("#dropdown-menu").css("display", "block");
+            }, function(){
+                $("#dropdown-menu").css("display", "none");
+            });
+
+            $("#dropdown-menu li a").hover(function(){
+                $(event.target).css("text-decoration","underline");
+            }, function(){
+                $(event.target).css("text-decoration","none");
+            });
+
+            $("#member-container div").hover(function(){
+                $(event.target).css("filter", "brightness(90%)");
+            }, function(){
+                $(event.target).css("filter", "brightness(100%)");
+            });
+
+            $("#member-container a").hover(function(){
+                $(event.target).css("text-decoration","underline");
+            },function(e){
+                $(event.target).css("text-decoration","none");
+            });
+
+
+            $("#popup input").click(function(){
+                $(event.target).parent().css("visibility", "hidden");
+            })
+
+            $("#popup label").click(function(){
+                $(event.target).parent().css("visibility", "hidden");
+            })
+
+            $("#popup button").click(function(){
+                $(event.target).parent().css("visibility", "hidden");
+            })
+        </script>
+    </body>
+</html>
