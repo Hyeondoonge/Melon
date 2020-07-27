@@ -61,6 +61,7 @@
                 position: relative;
                 left: 160px;
                 top: 35px;
+                overflow: hidden;
             }
 
             #menu-container {
@@ -81,40 +82,36 @@
                 float: left;
                 margin-left: 120px;
                 width:720px;
-                height:370px;
-                border: 1px solid pink;
+                height:362px;
             }
 
             #select-container {
-                width:720px;
-                height:30px;
-                padding-top: 20px;
-                border: 5px solid pink;
-            }
-
-            .left{
                 position: relative;
-                float: left;
-                width:470px;
-                height:310px;
-                border: 1px solid pink;
-            }
-
-            .left > div {
-                width: 150px;
-                height: 150px;
-                margin: 2px;
-                float:left;
-                border: 1px solid greenyellow;
+                top: 20px;
+                width:720px;
+                height:25px;
             }
 
             .right{
                 position: relative;
-                float: right;
+                float: left;
+                top: 15px;
                 width:240px;
-                height:310px;
-                border: 1px solid pink;
+                height:306px; 
+                margin: 0px;
+               /* overflow: hidden; */
             }
+
+            .right a {
+                width:240px;
+                height:306px; 
+                margin: 0px;
+            }
+
+             .right a img{
+                 position: relative;
+                 margin: 0px;
+            } 
 
             #login-container {
                 float: right;
@@ -127,8 +124,8 @@
             #member-container {
                 background-color: rgb(250, 250, 250);
                 position: relative;
-                top: 55px;
-                height:110px;
+                top: 50px;
+                height:105px;
                 border: 1px solid rgb(216, 215, 215);
             }
 
@@ -136,16 +133,16 @@
                 position: relative;
                 background-color: rgb(16, 207, 89);
                 width: 250px;
-                height:40px;
-                margin-top: 30px;
+                height: 40px;
+                margin-top: 25px;
                 margin-left: 20px;
                 text-align: center;
             }
 
             #event-container {
                 position: relative;
-                top: 65px;
-                height: 185px;
+                top: 60px;
+                height: 188px;
                 border: 1px solid black;
                 overflow: hidden;
             }
@@ -182,7 +179,7 @@
                 height:210px;
                 border: 1px solid black;
             } */
-            ul{
+            ul:not(#slide){
                 display: inline;
                 padding: 5px 0px;
                 list-style: none;
@@ -224,6 +221,8 @@
                 font-family: 'MDotum';
                 font-weight: 550;
                 color: rgb(126, 126, 126);
+
+                border: 1px solid pink;
             }
 
             #ticket{
@@ -386,7 +385,6 @@
            }
            
            #select-container li a {
-
                font-family: 'MDotum';
                font-weight: bolder;
                color: rgb(114, 114, 114);
@@ -400,33 +398,31 @@
                 font-family: 'MDotum';
                 font-size: 12px;
                 color: rgb(138, 138, 138);
-                border: 1px solid black;
            }
 
            #curpage{ 
                float: left;
                font-family: 'MDotum';
                margin-top: 3px;
-               margin-left: 33px;
+               margin-left: 30px;
                font-size: 12px;
                padding: 0px 0px;
                margin-right: 0px;
            }
 
-           #select-container > div {
+           #pointerselector-container{
                float: left;
                width: 60px;
                height: 30px;
                margin-top: 3px;
-               margin-left: 2px;
-               border: 1px solid black;
+               margin-left: 5px;
             }               
 
             #middle-container .prev{
-                cursor: pointer;
                 position: relative;
                 user-select: none;
             }
+
             #middle-container .next {
                 cursor: pointer;
                 position: relative;
@@ -434,7 +430,7 @@
 
            #member-container span,  #member-container a{
                position: relative;
-               top: 20px;
+               top: 15px;
                left: 19px;
                font-family: "Dotum";
                font-size: 11px;
@@ -448,7 +444,7 @@
 
            #member-container div span {
                 position: relative;
-                top: 8px;
+                top: 5px;
                 font-family: "Dotum";
                 font-size: 14px;
                 font-weight: bolder;
@@ -457,8 +453,8 @@
            }
 
            #popup{
-               position: relative;
-               background-color: white;
+                position: relative;
+                background-color: white;
                 z-index: 1;
                 padding-left:11px;
                 top: 200px;
@@ -467,6 +463,7 @@
                 height: 370px;
                 border: 1px solid rgb(94, 94, 94);
                 box-shadow: 1px 1px 1px rgb(206, 206, 206); 
+                visibility: hidden;
            }
 
            #popup > div{
@@ -476,7 +473,6 @@
                width: 235px;
                height: 310px;
                float: left;
-               visibility: hidden;
            }
 
            #popup input{
@@ -502,6 +498,83 @@
                height: 30px;
                top: 7px;
            }
+
+           #circleselector-container{
+                float: right;
+                position: relative;
+                margin-left: 123px;
+                margin-top: 5px;
+                width: 115px;
+                height: 20px;
+           }
+
+           .btnClass:not(#last){
+               float: left;
+               width: 9%;
+               margin-left: 2px;
+               margin-top: 3px;
+               padding: 0px;
+           }
+
+           #circleselector-container :last-child{
+                float: left;
+                width: 13%;
+                margin-left: 6px;
+           }
+
+           .subdiv{
+                position: relative;
+                float: left;
+                margin-top: 15px;
+                padding: 0px;
+                width:475px;
+                height:315px;
+           }
+
+            .subdiv > div {
+                width: 150px;
+                height: 150px;
+                margin-bottom: 5px;
+                margin-right: 5px;
+                float: left;
+                position: relative;
+            }
+
+            .subdiv > div > img{
+                margin: 0px;
+                padding: 0px;
+                vertical-align: middle;
+            }
+
+            .subdiv > div > div{
+                background-color: black;
+                opacity: 80%;
+                text-align: center;
+                position: absolute;
+                bottom: 0px;
+                right:0px;
+                height:28px;
+                width: 150px;
+                overflow: hidden;
+            }
+
+
+            .subdiv > div > div > a {
+                text-decoration: none;
+                color: white;
+                font-family: "Dotum";
+                font-size: 12px;    
+                z-index: 1;
+            }
+
+            .subdiv > div > div > img {
+                position: relative;
+                top: 5px;
+                left: 105px;
+            }
+
+
+
 
         </style>
         <script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -588,7 +661,7 @@
                         </div>
                       
                         <div>
-                            <a class="prev"><img src=prev2.PNG style="width:8%;"></a><a class="next"><img src=next2.PNG style="width:8%;"></a>
+                            <a class="prev"><img src=prev2.PNG style="width:7%;"></a><a class="next"><img src=next2.PNG style="width:7%;"></a>
                         </div>
                     </div>
 
@@ -619,28 +692,70 @@
                 <div id = "select-container">
                     <a href="#">최신 앨범</a>
                     <ul>
-                        <li><a href="#">전체</a></li>
+                        <li><a href="#" value="all" style="color: black">전체</a></li>
                         <li><a><img src="bar.PNG"></a></li>
-                        <li><a href="#">가요</a></li>
+                        <li><a href="#" value="kpop">가요</a></li>
                         <li><a><img src="bar.PNG"></a></li>
-                        <li><a href="#">POP</a></li>
+                        <li><a href="#" value="pop">POP</a></li>
                     </ul>
                     <span id="curpage">1</span><span id="totalpage">/9</span>
-                    <div>
-                        <a class="prev"><img src=prev2.PNG style="width:40%;"></a><a class="next"><img src=next2.PNG style="width:40%;"></a>
+                    <div id = "pointerselector-container">
+                        <a class="prev"><img src=unusedPrev.PNG value="unused" style="width:33%;"></a><a class="next"><img src=next2.PNG style="width:33%;"></a>
+                    </div>
+                    <div id = "circleselector-container" >
+                        <img class="btnClass" src="circle_2.png" style="cursor:pointer">
+                        <img class="btnClass" src="circle_1.png" style="cursor:pointer">
+                        <img class="btnClass" src="circle_1.png" style="cursor:pointer">
+                        <img class="btnClass" src="circle_1.png" style="cursor:pointer">
+                        <img class="btnClass" src="circle_1.png" style="cursor:pointer">
+                        <img class="btnClass" src="circle_1.png" style="cursor:pointer">
+                        <img class="btnClass" src="circle_1.png" style="cursor:pointer">
+                        <img class="btnClass" id="last" src="btn_3.png" value="stop" style="cursor:pointer">
                     </div>
                 </div>
                 
-                <div class = "left">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                <div class = "subdiv">
+                    <div><img src="seventeen.PNG" style="width: 100%;">
+                        <div style="cursor: pointer;"><a style="display: none; font-weight: 700;">Left & Right</a>
+                            <a href="#" value="Left & Right">세븐틴 (Seventeen)</a>
+                            <img src="player2.png" style="display: none; cursor: pointer;" width="25%">
+                        </div>
+                    </div>
+                    <div><img src="유키스.PNG" style="width: 100%; ">
+                        <div style="cursor: pointer;"><a style="display: none; font-weight: 700;">만만하니</a>
+                            <a href="#">유키스 (U - Kiss)</a>
+                            <img src="player2.png" style="display: none; cursor: pointer;" width="25%">
+                        </div>
+                    </div>
+                    <div><img src="iu.PNG" style="width: 100%; ">
+                        <div style="cursor: pointer;"><a style="display: none; font-weight: 700;">잠 못 드는 밤 비는 내리고</a>
+                            <a href="#">아이유</a>
+                            <img src="player2.png" style="display: none; cursor: pointer;" width="25%">
+                        </div>
+                    </div>
+                    <div><img src="싹쓰리.PNG" style="width: 100%; ">
+                        <div style="cursor: pointer;"><a style="display: none; font-weight: 700;">지난 여름 바닷가</a>
+                            <a href="#">싹쓰리 (Ssak3)</a>
+                            <img src="player2.png" style="display: none; cursor: pointer;" width="25%">
+                        </div>
+                    </div>
+                    <div><img src="2pm.PNG" style="width: 100%; ">
+                        <div style="cursor: pointer;"><a style="display: none; font-weight: 700;">Heartbeat</a>
+                            <a href="#">2PM</a>
+                            <img src="player2.png" style="display: none;" width="25%">
+                        </div>
+                    </div>
+                    <div><img src="hwasa.PNG" style="width: 100%;">
+                        <div style="cursor: pointer;"><a style="display: none; font-weight: 700;">마리아 (Maria)</a>
+                            <a href="#">화사 (hwasa)</a>
+                            <img src="player2.png" style="display: none;" width="25%">
+                        </div>
+                    </div>
                 </div>
-                <div class = "right">
-                    <div></div>
+               
+                <div class="right">
+                        <a href="#"><img src="gyu.PNG" width="100%" style="display: inline; "></a> <!--  -->
+                        <a href="#"><img src="egg.PNG" width="100%" style="display: inline"></a> <!-- -->
                 </div>
             </div>
 
@@ -650,7 +765,7 @@
                     <a href="#">회원가입</a>
                     <div style="cursor: pointer;"><span>로그인</span></div>
                 </div>
-                <div id="event-container"><img src="eventImg.PNG" usemap="#workmap3" title="티켓(모차르트)" style="cursor: pointer;" width="100%"";>
+                <div id="event-container"><img src="eventImg.PNG" usemap="#workmap3" title="티켓(모차르트)" style="cursor: pointer;" width="100%";>
                     <map name="workmap3">
                         <area shape="rect" coords="0,0,150,100" href="#">
                         </map></div>
@@ -675,25 +790,32 @@
             var slideIndex = 1; 
             showSlides(slideIndex);
 
-            $(".prev").click(function(){
-                slideIndex -= 1;
-                showSlides(slideIndex);
-            });
+            $("#news-container .prev").bind("mouseenter mouseleave click" ,function(e){
+                if(e.type == "mouseenter"){
+                    $(event.target).find("img").attr("src", "prev1.png");
+                }
+                else if(e.type == "mouseleave"){
+                    $(event.target).find("img").attr("src", "prev2.png");
+                }
+                else if(e.type == "click"){
+                    slideIndex -= 1;
+                    showSlides(slideIndex);
+                }
+            })
+        
 
-            $(".prev").hover(function(event){
-                $(event.target).find("img").css("filter", "brightness(80%)");
-            }, function(event){
-                $(event.target).find("img").css("filter", "brightness(100%)");
-            });
-
-            $(".next").click(function(){
-                slideIndex += 1;
-                showSlides(slideIndex);
-            }).hover(function(){
-                $(event.target).find("img").css("filter", "brightness(80%)");
-            }, function(){
-                $(event.target).find("img").css("filter", "brightness(100%)");
-            });
+            $("#news-container .next").bind("mouseenter mouseleave click" ,function(e){
+                if(e.type == "mouseenter"){
+                    $(event.target).find("img").attr("src", "next1.png");
+                }
+                else if(e.type == "mouseleave"){
+                    $(event.target).find("img").attr("src", "next2.png");
+                }
+                else if(e.type == "click"){
+                    slideIndex += 1;
+                    showSlides(slideIndex);
+                }
+            })
 
             function showSlides(n) {
 
@@ -704,6 +826,7 @@
 
                 $(".news").css("display","none");
                 $(".news").eq(slideIndex-1).css("display","block");
+              
               }
 
 
@@ -842,6 +965,210 @@
             $("#popup button").click(function(){
                 $(event.target).parent().css("visibility", "hidden");
             })
+
+             $(".left div").hover(function(){
+                $(event.target).fadeTo("fast", 0.8);
+
+             }, function(){
+                $(event.target).css("filter","brightness(100%)");
+             })
+
+
+            var curGenre = "all";
+
+            $("#select-container li a").click(function(){
+
+                for(var i =0; i < 3; i++){
+                    var alist = $("#select-container li a").eq(2*i);
+
+                    if(alist.attr("value") == curGenre){
+                        alist.css("color", "rgb(114, 114, 114)");
+                    }
+                }
+                $(event.target).css("color", "black");
+                curGenre = $(event.target).attr("value");
+            })
+
+            $(".subdiv div a").hover(function(){
+                $(event.target).css("text-decoration", "underline" );
+            }, function(){
+                $(event.target).css("text-decoration", "none" );
+            })
+
+            $(".subdiv div").hover(function(){
+                 $(event.target).parent().find("div").animate({
+                    padding: "61px 0px"
+                    
+                 }, 50);
+
+                 $(event.target).parent().find("div").find("a").eq(0).css("display", "block");
+                 $(event.target).parent().find("div").find("img").eq(0).css("display", "block");
+             }, function(){
+                $(event.target).parent().find("div").animate({
+                    padding: "0px 0px"
+                    
+                 }, 50);
+                    $(event.target).parent().find("div").find("a").eq(0).css("display", "none");
+                    $(event.target).parent().find("div").find("img").eq(0).css("display", "none");
+               // $(event.target).parent().find("div").eq(1).remove(0);
+               // $(event.target).parent().find("div").css("padding","0px 0px")
+            })
+
+            $(".subdiv div div").hover(function(){
+                $(event.target).find("a").trigger('hover');
+            })
+
+            $(".subdiv div div img").hover(function(){
+                $(event.target).attr("src", "player1.png");
+            }, function(){
+                $(event.target).attr("src", "player2.png");
+            })
+
+            var albumIndex = 1;
+
+            $("#album-container .prev").bind("mouseenter mouseleave click" ,function(e){
+
+                if($(event.target).attr("value") != "unused"){ 
+
+                    $(event.target).siblings(".next").removeAttr("value", "unused");
+                    
+                    if(e.type == "mouseenter"){
+                        $(event.target).find("img").attr("src", "prev1.png");
+                    }
+                    else if(e.type == "mouseleave"){
+                        $(event.target).find("img").attr("src", "prev2.png");
+                    }
+                    else if(e.type == "click"){
+                        if(albumIndex == 1){
+                            $(event.target).find("img").attr("src", "unusedPrev.png");
+                        }
+                        else{
+                            $(event.target).find("img").attr("src", "prev2.png");
+                            $(event.target).find("img").css("cursor", "pointer");
+                        }
+                        albumIndex -= 1;
+                        
+                        albumSlides(albumIndex, $(event.target));
+                    }
+                }
+            })
+        
+
+            $("#album-container .next").bind("mouseenter mouseleave click" ,function(e){
+
+                if($(event.target).attr("value") != "unused"){ 
+                    $(event.target).siblings(".prev").removeAttr("value", "unused");
+
+                    if(e.type == "mouseenter"){
+                        $(event.target).find("img").attr("src", "next1.png");
+                    }
+                    else if(e.type == "mouseleave"){
+                        $(event.target).find("img").attr("src", "next2.png");
+                    }
+                    else if(e.type == "click"){
+
+                        albumIndex += 1;
+
+                        if(albumIndex == 9){
+                            console.log("?");
+                            $(event.target).find("img").attr("src", "unusedNext.png");
+                        }
+                        else{
+                            $(event.target).find("img").attr("src", "next2.png");
+                            $(event.target).find("img").css("cursor", "pointer");
+                        }
+                        albumSlides(albumIndex, $(event.target));
+                    }
+                }
+            })
+
+            function albumSlides(n, e) {
+
+                if(n == 1){ e.attr("value", "unused"); e.attr("value", "unusedNe.png");
+                
+                }
+                
+                }
+
+
+
+                var curBtnum = 0;
+                $(".btnClass").bind("mousedown mouseleave click", function(e){
+                    // hover 대신 mouseenter
+                
+                switch($(event.target).attr("value")){
+                    
+                    case "stop":  
+
+                        if(e.type == "mousedown" ){
+                            $(event.target).attr("src", "btn_4.PNG");
+                            }
+                        else if(e.type == "mouseleave"){
+                                $(event.target).attr("src", "btn_3.PNG");
+                            }
+                            
+                        else if(e.type == "click"){
+                                $(event.target).attr("src", "btn_4.PNG");
+                                $(event.target).attr("value", "play");
+                                clearInterval(timerId);
+                            }
+
+                    break;
+                    
+                    case "play": 
+                        if(e.type == "mousedown" ){
+                                    $(event.target).attr("src", "btn_6.PNG");
+                                }
+                        else if(e.type == "mouseleave"){
+                                    $(event.target).attr("src", "btn_5.PNG");
+                                }
+                        else if(e.type == "click"){
+                                $(event.target).attr("src", "btn_3.PNG");
+                                $(event.target).attr("value", "stop");
+                                startClock();
+                                }
+                    break;
+
+                    default :
+                            if(e.type == "click"){
+                                $(".btnClass").eq(curBtnum).attr("src", "circle_1.PNG");
+                                $(event.target).attr("src", "circle_2.PNG");
+
+                                curBtnum = $(event.target).index();
+                        }
+                    }
+                    }
+                )
+
+                var timerId = null;
+
+                function startClock(){
+
+                    timerId = setInterval(function(){ 
+
+                    $(".btnClass").eq(curBtnum++).attr("src", "circle_1.PNG");
+                    if(curBtnum == 7) { curBtnum = 0;}
+                    $(".btnClass").eq(curBtnum).attr("src", "circle_2.PNG");
+
+                        $(".right a img").eq(0).animate({
+                            left: "-240px"
+                        }, 3000, function(){
+                            $(".right a img").eq(0).css("display", "block");
+
+                        })
+
+                        //.css("display", "none").end().eq(1).animate({
+                        //    left: "0px"
+                        // })
+                    
+                    // 다음 이미지
+
+
+                    }, 3000);
+                }
+
+                startClock();
+
         </script>
     </body>
 </html>
