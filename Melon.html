@@ -87,7 +87,7 @@
 
             #select-container {
                 position: relative;
-                top: 20px;
+                top: 5px;
                 width:720px;
                 height:25px;
             }
@@ -95,22 +95,31 @@
             .right{
                 position: relative;
                 float: left;
-                top: 15px;
-                width:240px;
-                height:306px; 
+                top: 0px;
+                width:235px;
+                height:307px; 
                 margin: 0px;
-               /* overflow: hidden; */
+                padding: 0px;
+                overflow: hidden;  
             }
 
-            .right a {
-                width:240px;
-                height:306px; 
-                margin: 0px;
+            .right ul{
+                position: relative;
+                width: 1680px;
+                height: 307px;
+                margin: 0; 
+                padding: 0;
             }
 
-             .right a img{
+            .right img{
+                 float: left;
+            } 
+
+            .right li{
                  position: relative;
-                 margin: 0px;
+                 display: inline;
+                 padding:0;
+                 margin:0;
             } 
 
             #login-container {
@@ -179,13 +188,19 @@
                 height:210px;
                 border: 1px solid black;
             } */
-            ul:not(#slide){
+            
+            #head-container ul{
                 display: inline;
                 padding: 5px 0px;
                 list-style: none;
             }
 
             #head-container li{
+                display: inline;
+                padding: 12px 6px;
+            }
+
+            #select-container li{
                 display: inline;
                 padding: 12px 6px;
             }
@@ -220,9 +235,7 @@
                 font-size: 13px;
                 font-family: 'MDotum';
                 font-weight: 550;
-                color: rgb(126, 126, 126);
-
-                border: 1px solid pink;
+                color: rgb(126, 126, 126);  
             }
 
             #ticket{
@@ -231,7 +244,7 @@
                 height:13px; 
             }
 
-            li img{
+            li img:not(.rightImg){
                 vertical-align: middle;
                 width:1px;
                 height:13px; 
@@ -463,7 +476,6 @@
                 height: 370px;
                 border: 1px solid rgb(94, 94, 94);
                 box-shadow: 1px 1px 1px rgb(206, 206, 206); 
-                visibility: hidden;
            }
 
            #popup > div{
@@ -525,7 +537,7 @@
            .subdiv{
                 position: relative;
                 float: left;
-                margin-top: 15px;
+                margin-top: 0px;
                 padding: 0px;
                 width:475px;
                 height:315px;
@@ -573,9 +585,6 @@
                 left: 105px;
             }
 
-
-
-
         </style>
         <script src="http://code.jquery.com/jquery-latest.js"></script>
     </head>
@@ -586,6 +595,7 @@
             <input type="checkbox" id="cb"><label for="cb">오늘 하루 이 창을 열지 않음</label>
             <button>닫기</button>
         </div>
+
         <div id="box-container">
             <div id="head-container">
                 <div id="top-container">
@@ -685,8 +695,9 @@
                         <li><a href="#">마이뮤직</a></li>
                         <li><a href="#">피드</a></li>
                     </ul>
-            </div>
+                </div>
 
+            </div>
         <div id="middle-container">
             <div id="album-container">
                 <div id = "select-container">
@@ -703,13 +714,13 @@
                         <a class="prev"><img src=unusedPrev.PNG value="unused" style="width:33%;"></a><a class="next"><img src=next2.PNG style="width:33%;"></a>
                     </div>
                     <div id = "circleselector-container" >
-                        <img class="btnClass" src="circle_2.png" style="cursor:pointer">
-                        <img class="btnClass" src="circle_1.png" style="cursor:pointer">
-                        <img class="btnClass" src="circle_1.png" style="cursor:pointer">
-                        <img class="btnClass" src="circle_1.png" style="cursor:pointer">
-                        <img class="btnClass" src="circle_1.png" style="cursor:pointer">
-                        <img class="btnClass" src="circle_1.png" style="cursor:pointer">
-                        <img class="btnClass" src="circle_1.png" style="cursor:pointer">
+                        <img class="btnClass" value="enabled" src="circle_2.png" style="cursor:pointer">
+                        <img class="btnClass" value="enabled" src="circle_1.png" style="cursor:pointer">
+                        <img class="btnClass" value="enabled" src="circle_1.png" style="cursor:pointer">
+                        <img class="btnClass" value="enabled" src="circle_1.png" style="cursor:pointer">
+                        <img class="btnClass" value="enabled" src="circle_1.png" style="cursor:pointer">
+                        <img class="btnClass" value="enabled" src="circle_1.png" style="cursor:pointer">
+                        <img class="btnClass" value="enabled" src="circle_1.png" style="cursor:pointer">
                         <img class="btnClass" id="last" src="btn_3.png" value="stop" style="cursor:pointer">
                     </div>
                 </div>
@@ -754,8 +765,15 @@
                 </div>
                
                 <div class="right">
-                        <a href="#"><img src="gyu.PNG" width="100%" style="display: inline; "></a> <!--  -->
-                        <a href="#"><img src="egg.PNG" width="100%" style="display: inline"></a> <!-- -->
+                    <ul>
+                        <li value="0"><img src="gyu.PNG" width="14%" class="rightImg"></li>
+                        <li value="1" style="display: none" ><img src="egg.PNG" width="14%" class="rightImg"></li>
+                        <li value="2" style="display: none"><img src="ssack3.PNG" width="14%" class="rightImg"></li>
+                        <li value="3" style="display: none"><img src="hi.PNG" width="14%" class="rightImg"></li>
+                        <li value="4" style="display: none"><img src="gyu.PNG" width="14%" class="rightImg"></li>
+                        <li value="5" style="display: none"><img src="egg.PNG" width="14%" class="rightImg"></li>
+                       <li value="6" style="display: none"><img src="hi.PNG" width="14%" class="rightImg"></li>  
+                    </ul>
                 </div>
             </div>
 
@@ -1010,8 +1028,6 @@
                  }, 50);
                     $(event.target).parent().find("div").find("a").eq(0).css("display", "none");
                     $(event.target).parent().find("div").find("img").eq(0).css("display", "none");
-               // $(event.target).parent().find("div").eq(1).remove(0);
-               // $(event.target).parent().find("div").css("padding","0px 0px")
             })
 
             $(".subdiv div div").hover(function(){
@@ -1070,7 +1086,6 @@
                         albumIndex += 1;
 
                         if(albumIndex == 9){
-                            console.log("?");
                             $(event.target).find("img").attr("src", "unusedNext.png");
                         }
                         else{
@@ -1082,6 +1097,8 @@
                 }
             })
 
+            var curBtnum = 0;
+
             function albumSlides(n, e) {
 
                 if(n == 1){ e.attr("value", "unused"); e.attr("value", "unusedNe.png");
@@ -1090,9 +1107,6 @@
                 
                 }
 
-
-
-                var curBtnum = 0;
                 $(".btnClass").bind("mousedown mouseleave click", function(e){
                     // hover 대신 mouseenter
                 
@@ -1111,6 +1125,7 @@
                                 $(event.target).attr("src", "btn_4.PNG");
                                 $(event.target).attr("value", "play");
                                 clearInterval(timerId);
+                                clearInterval(id);
                             }
 
                     break;
@@ -1126,49 +1141,127 @@
                                 $(event.target).attr("src", "btn_3.PNG");
                                 $(event.target).attr("value", "stop");
                                 startClock();
+                                startClock2();
                                 }
                     break;
 
                     default :
-                            if(e.type == "click"){
+                            if(e.type == "click" && $(event.target) != $(".btnClass").eq(7)){ // click 하자마자 변경!
+                                if($(".btnClass").attr("value") == "enabled") { return; }
+                                clearInterval(timerId);
+                                clearInterval(id);
+
                                 $(".btnClass").eq(curBtnum).attr("src", "circle_1.PNG");
                                 $(event.target).attr("src", "circle_2.PNG");
 
                                 curBtnum = $(event.target).index();
+                                btnClick = true;
+
+                                btnlistSlide(curBtnum);
+
+                                startClock();
+                                startClock2(nowEvent);
+                            }
                         }
                     }
-                    }
                 )
+                var btnClick = false;
 
                 var timerId = null;
 
                 function startClock(){
-
                     timerId = setInterval(function(){ 
 
                     $(".btnClass").eq(curBtnum++).attr("src", "circle_1.PNG");
                     if(curBtnum == 7) { curBtnum = 0;}
                     $(".btnClass").eq(curBtnum).attr("src", "circle_2.PNG");
 
-                        $(".right a img").eq(0).animate({
-                            left: "-240px"
-                        }, 3000, function(){
-                            $(".right a img").eq(0).css("display", "block");
-
-                        })
-
-                        //.css("display", "none").end().eq(1).animate({
-                        //    left: "0px"
-                        // })
-                    
-                    // 다음 이미지
-
-
                     }, 3000);
                 }
 
                 startClock();
 
+                var arrSlide = $(".right ul li");
+
+                var id = null;
+
+                let nowEvent = 0;
+                let cnt = 0;
+
+                function startClock2(num){
+                       id =  setInterval(function(){ 
+                    
+                       if(cnt == 0){
+                            listSlide(num); 
+                            cnt++;
+                       }
+                       else if(!btnClick){
+                            listSlide(num); 
+                       }
+                       else{ // btnClick = true
+                           btnClick = false;
+                            $(".btnClass").attr("value", "enabled");
+                       }
+
+                    }, 3000); 
+                }
+
+                startClock2(nowEvent);
+
+                function listSlide(){
+
+                        var arr = $(".right ul");
+
+                        if(nowEvent == 7){ nowEvent = 0;} 
+
+                        var idx = 0;
+
+                        for(var i = 0; i < 7; i++){ 
+                            if(arrSlide.eq(i).attr("value") == nowEvent){
+                                idx = i;
+                            }
+                            else{
+                                arrSlide.eq(i).css("display", "none");
+                            }
+                        }
+
+                        if(idx == 6){ arrSlide.eq(0).css("display", "block"); }
+                        else { arrSlide.eq(idx+1).css("display", "block");}
+                        
+
+                        arr.animate({left: "-240px"}, "slow", function(){
+                            arr.css("left", "0px");
+                            arr.append(arrSlide.eq(nowEvent).css("display", "none"));
+                            nowEvent ++;
+                        })
+                   }
+
+                function btnlistSlide(index){
+
+                        $(".btnClass").attr("value", "disabled");
+
+                        var arr = $(".right ul");
+                        var idx = 0;
+
+                        if(curBtnum == nowEvent) return;
+                         
+                        for(var i = 0; i < 7; i++){
+                            if(arrSlide.eq(i).attr("value") == index){
+                                idx = i;
+                            }
+                            else if(arrSlide.eq(i).attr("value") != nowEvent){
+                                    arrSlide.eq(i).css("display", "none");
+                               }
+                        }
+
+                        arrSlide.eq(idx).css("display", "block");
+
+                        arr.animate({left: "-240px"}, "slow", function(){
+                            arr.css("left", "0px");
+                            arr.append(arrSlide.eq(nowEvent).css("display", "none"));
+                            nowEvent = index;
+                            })
+                        }
         </script>
     </body>
 </html>

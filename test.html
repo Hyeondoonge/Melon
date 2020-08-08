@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <style>
+
+             .right img{
+                 position: relative;
+                 float: left;
+            } 
+
+            div{
+                position: relative;
+                float: left;
+                top: 15px;
+                width:240px;
+                height:303px; 
+                margin: 0px;
+                border: 1px solid pink;
+            
+            }
+
+            ul{
+                position: relative;
+                width: 720px;
+                margin: 0; 
+                padding: 0;
+                border: 1px solid pink;
+
+            }
+
+            li{
+                position: relative;
+                display: inline;
+            }
+
+
+        </style>
+    </head>
+    <body>
+            <div class="right">
+                <ul>
+                    <li value="gyu"><img src="gyu.PNG" width="33%"></li>
+                    <li value="egg"><img src="egg.PNG" width="33%"></li>
+                    <li value="egg"><img src="hwasa.PNG" width="33%"></li>
+                </ul>
+            </div>
+            <script src="http://code.jquery.com/jquery-latest.js"></script>
+            <script>
+                
+                
+                let now = 0;
+
+                var arrSlide = $(".right ul li");
+
+            var id =  setInterval(function(){ 
+
+                if(now == 3){ now = 0;}
+                // 다같이 움직여야됨
+                var arr = $(".right ul");
+                var listLen = arr.length;
+
+                $(".right ul").animate({
+                        left: "-240px"}, "slow",
+
+                function(){
+                 $(".right ul").css("left", "0px");
+                arr.append(arrSlide[now++]);
+                             
+                            //$(".right ul").append($(arr.find("li").eq(1)));
+                     } );
+                //  clearInterval(id);
+            }, 3000);
+        </script>
+
+    </body>
+</html>
