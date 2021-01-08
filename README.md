@@ -1,4 +1,4 @@
-# Melon clone 해보기
+# Melon clone
 
 ![melon](https://user-images.githubusercontent.com/55647436/104005483-8a54ae00-51e8-11eb-9093-52f5e4ad54ee.gif)
 
